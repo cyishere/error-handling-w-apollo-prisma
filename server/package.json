@@ -1,0 +1,19 @@
+{
+  "name": "error-handling-server",
+  "version": "1.0.0",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js"
+  },
+  "dependencies": {
+    "@prisma/client": "2.22.1",
+    "apollo-server": "^2.24.0",
+    "graphql": "^15.5.0"
+  },
+  "devDependencies": {
+    "eslint": "^7.26.0",
+    "prisma": "2.22.1"
+  },
+  "license": "MIT"
+}
