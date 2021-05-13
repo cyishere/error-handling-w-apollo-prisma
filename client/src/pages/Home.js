@@ -17,8 +17,8 @@ const Home = () => {
 
   const users = data?.getUsers || [];
 
+  // use the `loading`, `error` state from Apollo Client for guard clause
   let content;
-
   if (loading) {
     content = (
       <Segment>
