@@ -9,7 +9,11 @@ const resolvers = {
     },
   },
   Mutation: {
-    register: (_, { email, username, password, passconf }, { prisma }) => {
+    register: async (
+      _,
+      { email, username, password, passconf },
+      { prisma }
+    ) => {
       let errors = {};
 
       try {
@@ -24,7 +28,7 @@ const resolvers = {
           throw errors;
         }
 
-        const user = prisma.user.create({
+        const user = await prisma.user.create({
           data: {
             email,
             username,
@@ -34,6 +38,7 @@ const resolvers = {
 
         return user;
       } catch (err) {
+        console.log(err);
         throw new UserInputError("Bad User Input", { errors: err });
       }
     },
