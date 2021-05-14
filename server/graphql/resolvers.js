@@ -34,8 +34,7 @@ const resolvers = {
 
         return user;
       } catch (err) {
-        console.log(err);
-        throw new UserInputError("Bad Request", { errors: err });
+        throw new UserInputError("Bad User Input", { errors: err });
       }
     },
   },
