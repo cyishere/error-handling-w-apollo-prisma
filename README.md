@@ -1,10 +1,21 @@
-This is the "starter repo" for the "Error Handling with Apollo & Prisma" blog post.
+This is the final example code of the blog post "Error Handling with Apollo and Prisma".
 
-In the `server/` fold, the server already has some error handling with Apollo Server.
+After install all the dependencies in `server/` and `client/` folder respectively, use the commands below to run the app.
 
-In the `client/` it only has the basic UI.
+```bash
+# in `server/` folder
+yarn dev
 
-For running the server and client, please install the dependencies first.
+# or
 
-- [README on server](./server/README.md)
-- [README on client](./client/README.md)
+npm run dev
+```
+
+```bash
+# in `client/` folder
+yarn start
+
+# or
+
+npm run start
+```

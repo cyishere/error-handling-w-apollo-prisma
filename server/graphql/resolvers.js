@@ -38,8 +38,11 @@ const resolvers = {
 
         return user;
       } catch (err) {
-        console.log(err);
-        throw new UserInputError("Bad User Input", { errors: err });
+        if (err.code === "P2002") {
+          const field = err.meta.target[0];
+          errors[field] = `${field} is already taken.`;
+        }
+        throw new UserInputError("Bad User Input", { errors });
       }
     },
   },
